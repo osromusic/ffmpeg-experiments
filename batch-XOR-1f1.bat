@@ -1,0 +1,2 @@
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -b:v 5000k -filter_complex "[0:v][1:v] blend=xor" -vframes 200 "F:\gg\Pixacts\Pix-glyj\XOR_%%~na.mp4"
+pause

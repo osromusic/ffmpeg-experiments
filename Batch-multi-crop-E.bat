@@ -1,0 +1,2 @@
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -filter_complex "[0:v]split=4[in1][in2][in3][in4];[in1]crop=200:200:1:1[out1];[in2]crop=200:200:101:101[out2];[in3]crop=200:200:201:201[out3];[in4]crop=200:200:301:301[out4]" -map "[out1]" -vcodec libx264 -b:v 50k "F:\gg\pix-dod\divixxx\Mul-CropE-a_%%~na.mp4" -map "[out2]" -vcodec libx264 -b:v 50k "F:\gg\pix-dod\divixxx\Mul-CropE-b_%%~na.mp4" -map "[out3]" -vcodec libx264 -b:v 50k "F:\gg\pix-dod\divixxx\Mul-CropE-c_%%~na.mp4" -map "[out4]" -vcodec libx264 -b:v 50k "F:\gg\pix-dod\divixxx\Mul-CropE-d_%%~na.mp4"
+pause

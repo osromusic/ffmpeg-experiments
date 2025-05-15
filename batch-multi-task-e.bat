@@ -1,0 +1,11 @@
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=and" "F:\Glitch_Video\3com\Lachdrol\%%~na_and.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=burn" "F:\Glitch_Video\3com\Lachdrol\%%~na-burn.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=difference" "F:\Glitch_Video\3com\Lachdrol\%%~na-diff.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=divide" "F:\Glitch_Video\3com\Lachdrol\%%~na-divi.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=dodge" "F:\Glitch_Video\3com\Lachdrol\%%~na-dodge.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=exclusion" "F:\Glitch_Video\3com\Lachdrol\%%~na-exclu.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=negation" "F:\Glitch_Video\3com\Lachdrol\%%~na-nega.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=or" "F:\Glitch_Video\3com\Lachdrol\%%~na-or.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=reflect" "F:\Glitch_Video\3com\Lachdrol\%%~na-reflect.mp4"
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -itsoffset 0.050 -i "%%~na.mp4" -vcodec libx264 -filter_complex "[0:v][1:v] blend=xor" "F:\Glitch_Video\3com\Lachdrol\%%~na-xor.mp4"
+pause

@@ -1,0 +1,2 @@
+for %%a in ("*.mp4") do ffmpeg -ss 10 -i "%%~na.mp4" -ss 10.040 -i "%%~na.mp4" -vcodec libx264 -b:v 2000K -filter_complex "[0:v][1:v] blend=exclusion" -vframes 200 -r 20  "F:\gg\Exclusion-Ufinex_%%~na.mp4"
+pause

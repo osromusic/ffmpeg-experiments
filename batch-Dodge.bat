@@ -1,0 +1,2 @@
+for %%a in ("*.mp4") do ffmpeg -i "%%~na.mp4" -ss 0.100 -i "%%~na.mp4" -vcodec libx264 -b:v 2000K -filter_complex "[0:v][1:v] blend=dodge" -vframes 200 -r 20  "F:\Glitch Video\Glitch Downvert\Glitch Dodge\Dodge_%%~na.mp4"
+pause
